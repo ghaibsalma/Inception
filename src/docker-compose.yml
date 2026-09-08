@@ -1,6 +1,6 @@
 services:
   nginx:
-    build: ./nginx
+    build: ./requirement/nginx
     container_name: nginx
     ports:
       - "443:443"
@@ -14,7 +14,7 @@ services:
   wordpress:
     env_file:
       - .env
-    build: ./wordpress
+    build: ./requirement/wordpress
     container_name: wordpress
     volumes:
       - wordpress:/var/www/html
@@ -24,7 +24,7 @@ services:
       - inception
     restart: always
   mariadb:
-    build: ./mariadb
+    build: ./requirement/mariadb
     container_name: mariadb
     env_file:
       - .env
