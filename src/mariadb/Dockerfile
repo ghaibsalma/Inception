@@ -9,9 +9,9 @@ RUN mkdir -p /var/run/mysqld \
     && chown -R mysql:mysql /var/run/mysqld \
     && chmod 777 /var/run/mysqld
 
-COPY my.cnf /etc/mysql/mariadb.conf.d/50-server.cnf 
+COPY ./conf/my.cnf /etc/mysql/mariadb.conf.d/50-server.cnf 
 
-COPY ./mariadb.sh /usr/local/bin/
+COPY ./tools/mariadb.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/mariadb.sh
 
 EXPOSE 3306

@@ -23,7 +23,7 @@ RUN mkdir -p /var/www/html && chown -R www-data:www-data /var/www/html
 
 WORKDIR /var/www/html
 
-COPY ./entrypoint.sh /entrypoint.sh
+COPY ./tools/entrypoint.sh /entrypoint.sh
 
 RUN chmod +x /entrypoint.sh
 
