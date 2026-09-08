@@ -29,8 +29,8 @@ All operations go through `make`, run from the project root.
 
 **Day-to-day routine:**
 ```bash
-make up      # start the site
-make down    # stop it when you're done (nothing is lost)
+make up  
+make down
 ```
 
 ## 3. Accessing the website and the administration panel
@@ -67,10 +67,10 @@ All three services (`nginx`, `wordpress`, `mariadb`) should show as `Up`. If one
 
 **Check logs:**
 ```bash
-make logs           # all services at once
-make logs-nginx     # just nginx
-make logs-php       # just wordpress (php-fpm)
-make logs-db        # just mariadb
+make logs      
+make logs-nginx
+make logs-php  
+make logs-db   
 ```
 
 **Confirm the site actually responds:**
